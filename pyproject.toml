@@ -3,9 +3,10 @@ requires = ["setuptools>=45", "setuptools-scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "demo-sampler-bilby"
+name = "pypolychord-bilby"
 authors = [
-    {name = "your name", email = "your@email.com"},
+    {name = "Colm Talbot", email = "colm.talbot@ligo.org"},
+    {name = "Michael J. Williams", email = "michael.williams@ligo.org"},
 ]
 description = ""
 readme = "README.md"
@@ -32,4 +33,4 @@ test = [
 line-length = 79
 
 [project.entry-points."bilby.samplers"]
-demo_sampler = "demo_sampler_bilby.plugin:DemoSampler"
+pypolychord = "pypolychord_bilby.plugin:PyPolyChord"
