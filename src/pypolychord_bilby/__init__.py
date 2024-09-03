@@ -1,6 +1,6 @@
-"""An example of how to implement a sampler plugin in for bilby.
+"""Polychord plugin for bilby.
 
-This package provides the 'demo_sampler' sampler.
+This package provides the 'polychord' sampler.
 """
 from importlib.metadata import PackageNotFoundError, version
 
