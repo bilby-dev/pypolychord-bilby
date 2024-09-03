@@ -31,6 +31,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y build-essential cmake make gfortran
+        sudo apt-get install -y libopenmpi-dev openmpi-bin
     - name: Checkout PyPolyChord
       uses: actions/checkout@master
       with:
@@ -39,7 +40,7 @@ jobs:
     - name: Install PyPolyChord
       run: |
         cd PyPolyChordLite
-        make MPI=0
+        make
         python -m pip install --upgrade pip
         pip install numpy scipy
         pip install .
