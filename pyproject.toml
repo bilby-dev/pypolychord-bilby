@@ -17,7 +17,9 @@ classifiers = [
 ]
 dependencies = [
     "bilby>=2.3.0",
+    "pypolychord",
     "numpy",
+    "scipy",
 ]
 
 dynamic = ["version"]
