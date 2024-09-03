@@ -29,8 +29,15 @@ jobs:
         cache: 'pip'
     - name: Install dependencies
       run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential cmake make gfortran
+    - name: Install PyPolyChord
+      run: |
         python -m pip install --upgrade pip
-        # install bilby directly from source to support plugins
+        pip install numpy scipy
+        pip install git+https://github.com/PolyChord/PolyChordLite@master
+    - name: Install PyPolyChord-Bilby
+      run: |
         python -m pip install .[test]
     - name: Test with pytest
       run: |
