@@ -1,5 +1,5 @@
 import bilby
-from demo_sampler_bilby.plugin import DemoSampler
+from pypolychord_bilby.plugin import PyPolyChord
 import numpy as np
 import pytest
 
@@ -42,15 +42,16 @@ def test_run_sampler(bilby_likelihood, bilby_priors, tmp_path, sampler_kwargs):
     bilby.run_sampler(
         likelihood=bilby_likelihood,
         priors=bilby_priors,
-        sampler="demo_sampler",    # This should match the name of the sampler
+        sampler="pypolychord",
         outdir=outdir,
+        **sampler_kwargs
     )
 
 
 def test_expected_outputs():
-    filenames, dirs = DemoSampler.get_expected_outputs(
+    filenames, dirs = PyPolyChord.get_expected_outputs(
         outdir="outdir",
         label="test",
     )
     assert len(filenames) == 0
-    assert len(dirs) == 0
+    assert len(dirs) == 1
