@@ -2,6 +2,7 @@
 
 This package provides the 'polychord' sampler.
 """
+
 from importlib.metadata import PackageNotFoundError, version
 
 try:

@@ -44,7 +44,7 @@ def test_run_sampler(bilby_likelihood, bilby_priors, tmp_path, sampler_kwargs):
         priors=bilby_priors,
         sampler="pypolychord",
         outdir=outdir,
-        **sampler_kwargs
+        **sampler_kwargs,
     )
 
 
