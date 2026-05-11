@@ -6,25 +6,20 @@ This plugin provides the `pypolychord` sampler in `bilby`.
 
 ## Installation
 
-**Note:** since `polychord` cannot be installed via `pip` or `conda`, this
-plugin can only be installed from source.
-
-First, install `polychord` following the instructions in the `polychord`
+First, install `PolyChordLite` and `pypolychord` following the instructions in
+the `PolyChordLite`
 [documentation](https://github.com/PolyChord/PolyChordLite?tab=readme-ov-file#python-quickstart).
 
-Once `polychord` is installed, the plugin can be installed from the source
-code. This can either be done directly using pip:
+Once `pypolychord` is installed, install the plugin from PyPI:
 
 ```bash
-pip install git+https://github.com/bilby-dev/pypolychord-bilby.git
+pip install pypolychord-bilby
 ```
 
-or by first cloning the git repository and then installing the package:
+or from conda-forge
 
-```bash
-git clone git@github.com:bilby-dev/pypolychord-bilby.git
-cd pypolychord-bilby
-pip install .
+```
+conda install conda-forge:pypolychord-bilby
 ```
 
 ## Usage
