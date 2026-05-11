@@ -1,12 +1,19 @@
 from bilby.core.sampler.base_sampler import NestedSampler, signal_wrapper
 import numpy as np
 import os
-import pypolychord
-from pypolychord.settings import PolyChordSettings
+
+try:
+    import pypolychord
+    from pypolychord.settings import PolyChordSettings
+except ImportError:
+    raise ImportError(
+        "pypolychord is not installed. Please install pypolychord to use the "
+        "pypolychord plugin for bilby. See the README for installation instructions: "
+        "https://github.com/PolyChord/PolyChordLite"
+    )
 
 
 class PyPolyChord(NestedSampler):
-
     """
     Bilby wrapper of PyPolyChord
     https://arxiv.org/abs/1506.00171
@@ -57,7 +64,6 @@ class PyPolyChord(NestedSampler):
 
     @signal_wrapper
     def run_sampler(self):
-
         if self.kwargs["use_polychord_defaults"]:
             settings = PolyChordSettings(
                 nDims=self.ndim,
