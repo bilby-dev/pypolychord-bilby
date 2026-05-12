@@ -16,11 +16,8 @@ Once `pypolychord` is installed, install the plugin from PyPI:
 pip install pypolychord-bilby
 ```
 
-or from conda-forge
+**Note:** due to licensing constraints `pypolychord-bilby` is not available via `conda-forge`.
 
-```
-conda install conda-forge:pypolychord-bilby
-```
 
 ## Usage
 
